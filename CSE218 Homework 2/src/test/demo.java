@@ -42,7 +42,7 @@ public class demo extends Application {
 					AlertBox.display("Failure");
 				}
 			} catch (Exception ex) {
-				AlertBox.display("Exception");
+				AlertBox.display("Failure");
 			}
 		});
 	}

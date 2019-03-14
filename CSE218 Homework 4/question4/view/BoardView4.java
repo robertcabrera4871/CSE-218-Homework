@@ -2,7 +2,7 @@ package view;
 
 import java.io.FileInputStream;
 
-import controller.Controller;
+import controller.Controller4;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,14 +13,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
-import objects.CoordObject;
+import objects.CoordObject4;
 
-public class BoardView {
+public class BoardView4 {
 	GridPane pane;
 	ImageView iv;
 	Scene scene;
 
-	public BoardView() {
+	public BoardView4() {
 		pane = new GridPane();
 		Image image = null;
 		pane.setPadding(new Insets(20, 20, 20, 20));
@@ -35,13 +35,13 @@ public class BoardView {
 		addRectanglesAndButtons(rectangles, buttons);
 		armButtons(buttons);
 		Button undo = new Button("Undo");
-		undo.setOnAction(e->{
+		undo.setOnAction(e -> {
 			pane.getChildren().remove(iv);
-			Controller.handlePop();
-			pane.add(iv, Controller.getX(), Controller.getY());
+			Controller4.handlePop();
+			pane.add(iv, Controller4.getX(), Controller4.getY());
 		});
 		pane.add(undo, 0, 10);
-		pane.add(iv, Controller.getRandomStart().getX(), Controller.getRandomStart().getY());
+		pane.add(iv, Controller4.getRandomStart().getX(), Controller4.getRandomStart().getY());
 		pane.setAlignment(Pos.CENTER);
 		scene = new Scene(pane, 700, 710);
 	}
@@ -53,7 +53,7 @@ public class BoardView {
 				pane.getChildren().remove(iv);
 				int x = GridPane.getColumnIndex(button);
 				int y = GridPane.getRowIndex(button);
-				CoordObject coords = Controller.push(x,y);
+				CoordObject4 coords = Controller4.push(x, y);
 				pane.add(iv, coords.getX(), coords.getY());
 			});
 		}

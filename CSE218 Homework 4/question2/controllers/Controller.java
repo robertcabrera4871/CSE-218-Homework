@@ -11,23 +11,24 @@ public class Controller {
 	@SuppressWarnings("rawtypes")
 	static GenBag gBag;
 	static String bagType;
+	static int bagSize = 25;
 
 	public static void setBagString(Window window) {
-		gBag = new GenBag<String>(10);
+		gBag = new GenBag<String>(bagSize);
 		bagType = "Strings";
 		view = new BagView(bagType);
 		switchScene(window);
 	}
 
 	public static void setBagInteger(Window window) {
-		gBag = new GenBag<Integer>(10);
+		gBag = new GenBag<Integer>(bagSize);
 		bagType = "Integers";
 		view = new BagView(bagType);
 		switchScene(window);
 	}
 
 	public static void setBagDouble(Window window) {
-		gBag = new GenBag<Double>(10);
+		gBag = new GenBag<Double>(bagSize);
 		bagType = "Doubles";
 		view = new BagView(bagType);
 		switchScene(window);

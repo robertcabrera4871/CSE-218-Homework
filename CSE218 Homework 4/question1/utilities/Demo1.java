@@ -1,6 +1,6 @@
 package utilities;
 
-public class Demo {
+public class Demo1 {
 
 	public static void main(String[] args) {
 		Character[] chars = { 'A', 'B', 'C', 'D', 'E', 'F' };

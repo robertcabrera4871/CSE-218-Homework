@@ -30,6 +30,7 @@ public class BagView {
 		Button inputButton = new Button("Add");
 		inputButton.setOnAction(e ->{
 			text.appendText(Controller.handleInput(input.getText()) + "\n") ;
+			input.setText("");
 		});
 		box.setSpacing(10);
 		box.setPadding(new Insets(10));

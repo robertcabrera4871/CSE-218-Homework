@@ -5,7 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import view.BagTypeView;
 
-public class Demo extends Application{
+public class Demo2 extends Application{
 
 	public static void main(String[] args) {
 		Application.launch(args);
